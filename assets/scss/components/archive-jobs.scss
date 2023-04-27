@@ -1,0 +1,147 @@
+.jobs {
+    display: flex;
+    margin-top: 96px;
+    &__categories {
+        width: 20%;
+        &-item {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+            a {
+                border-bottom: 1px solid transparent;
+                span {
+                    margin-left: 4px;
+                }
+                &:hover {
+                    color: $light-blue;
+                    border-bottom: 1px solid $light-blue;
+                    span {
+                        color: $light-blue;
+                    }
+                }
+            }
+        }
+        @media (max-width: $screen-sm-min) {
+            width: 100%;
+        }
+    }
+    &__offers {
+        width: 80%;
+        &-jobs {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            &-post {
+                background: $primary-white;
+                border-radius: 4px;
+                box-shadow: $box-shadow;
+                overflow: hidden;
+            }
+            &-message{
+                grid-column: 1 / -1;
+            }
+            &-thumbnail {
+                width: 100%;
+                padding-top: 75%;
+                position: relative;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    right: 50%;
+                    -webkit-transform: translate(50%, -50%);
+                    -ms-transform: translate(50%, -50%);
+                    transform: translate(50%, -50%);
+                    height: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    -o-object-position: center;
+                    object-position: center;
+                }
+            }
+            &-text {
+                padding: 12px;
+                h4 {
+                    color: $light-blue;
+                }
+                .button {
+                    box-sizing: border-box;
+                    float: right;
+                    margin-top: 24px;
+                    margin-bottom: 12px;
+                    @media (max-width: $screen-sm-min) {
+                        width: 100%;
+                        float: unset;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+            &-desc {
+                margin-top: 12px;
+            }
+            @media (max-width: $screen-md-min) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: $screen-sm-min) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pagination {
+            width: 100%;
+            margin-top: 48px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            svg {
+                width: 16px;
+                height: 16px;
+                fill: $light-blue;
+                &:hover {
+                    fill: $light-blue-hvr;
+                }
+            }
+            .pagination-item {
+                font-size: 20px;
+            }
+            .unactive-pagination {
+                svg {
+                    fill: $gray;
+                }
+            }
+            a {
+                color: $light-blue;
+                &:hover {
+                    color: $light-blue-hvr;
+                }
+            }
+            a,
+            span {
+                display: flex;
+                align-items: center;
+            }
+            .active-page {
+                color: $light-blue-hvr;
+            }
+        }
+
+        @media (max-width: $screen-sm-min) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: $screen-md-min) {
+        gap: 24px;
+    }
+    @media (max-width: $screen-sm-min) {
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+}

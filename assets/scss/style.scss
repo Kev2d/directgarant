@@ -1,0 +1,30 @@
+/*
+  Theme Name: DirectGarant
+  Theme URI: https://keweb.ee/
+  Author: Keweb - Aspen Stream Web
+  Author URI: https://keweb.ee
+  Description: DirectGarant Theme
+  Version: 0.1
+  License: copyright Aspen Stream Web OÜ
+  Tags: DirectGarant
+*/
+
+@import "common/variables";
+@import "common/breakpoints";
+@import "common/global";
+
+@import "components/navigation";
+@import "components/header-banner";
+@import "components/footer";
+@import "components/404page";
+@import "components/textimage-block";
+@import "components/services-block";
+@import "components/whatwedo-block";
+@import "components/contact-block";
+@import "components/archive-jobs";
+@import "components/single-jobs";
+@import "components/contactform-block";
+@import "components/latestjobs-block";
+@import "components/boxbutton-block";
+
+@import "fonts/fonts";

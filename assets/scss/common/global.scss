@@ -1,0 +1,197 @@
+.content {
+  padding: 0 96px;
+  max-width: 1060px;
+  margin: 0 auto;
+  @media (max-width: $screen-md-min) {
+    padding: 0 48px;
+  }
+  @media (max-width: $screen-sm-min) {
+    padding: 0 24px;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body,
+html,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+* {
+  letter-spacing: -1px;
+  color: $dark-blue;
+  font-family: "SourceSansPro", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  strong {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  @media (max-width: $screen-md-min) {
+    font-size: 32px;
+  }
+  @media (max-width: $screen-sm-min) {
+    font-size: 28px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  @media (max-width: $screen-md-min) {
+    font-size: 28px;
+  }
+  @media (max-width: $screen-sm-min) {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  @media (max-width: $screen-md-min) {
+    font-size: 26px;
+  }
+  @media (max-width: $screen-sm-min) {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font-size: 22px;
+  @media (max-width: $screen-md-min) {
+    font-size: 18px;
+  }
+}
+
+p,
+li {
+  line-height: 28px;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.button {
+  padding: 0px 48px;
+  height: 40px;
+  color: $primary-white;
+  background: $light-blue;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  transition: All 0.3s ease-in-out;
+  &:hover {
+    background: $light-blue-hvr;
+  }
+}
+
+input {
+  height: 40px;
+  border-radius: 4px;
+}
+
+textarea {
+  border-radius: 4px;
+  resize: vertical;
+  max-height: 250px;
+}
+
+input,
+textarea {
+  border: 2px solid $gray;
+}
+
+input[type="submit"] {
+  background: $light-blue;
+  color: $primary-white;
+  display: inline-block;
+  width: auto !important;
+  cursor: pointer;
+  float: right;
+  padding: 0px 48px;
+  font-size: 18px;
+  transition: All 0.3s ease-in-out;
+  &:hover {
+    background: $light-blue-hvr;
+  }
+  @media (max-width: $screen-md-min) {
+    font-size: 16px;
+  }
+}
+
+.wpcf7 {
+  label {
+    font-weight: 300;
+    input,
+    textarea,
+    .codedropz-upload-handler {
+      margin-top: 8px;
+      &:focus {
+        border: 2px solid $light-blue;
+        outline: 0;
+      }
+    }
+    input,
+    textarea {
+      font-size: 16px;
+    }
+  }
+  .codedropz-upload-handler,
+  textarea {
+    height: 124px;
+  }
+  .codedropz-upload-handler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $gray;
+    font-size: 16px;
+    font-weight: 300;
+    h5 {
+      font-size: 16px;
+      font-weight: 300;
+    }
+    a {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+.slick-controls {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  svg {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    fill: $light-blue;
+    &:hover {
+      fill: $light-blue-hvr;
+    }
+  }
+}

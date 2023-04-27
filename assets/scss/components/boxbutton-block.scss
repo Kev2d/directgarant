@@ -1,0 +1,35 @@
+.boxbutton-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    max-width: 1200px;
+    margin: 96px auto 0 auto;
+    &__item {
+        box-shadow: $box-shadow;
+        padding: 24px 48px;
+        border-radius: 8px;
+        &-buttons {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            .button {
+                display: flex;
+                justify-content: center;
+                &:nth-child(even) {
+                    background: $pink;
+                    &:hover {
+                        background: $pink-hvr;
+                    }
+                }
+            }
+            @media (max-width: $screen-sm-min) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    @media (max-width: $screen-sm-min) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

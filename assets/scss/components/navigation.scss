@@ -1,0 +1,126 @@
+.header {
+    display: flex;
+    padding: 24px 48px;
+    gap: 48px;
+    background: $primary-white;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 12px 48px;
+        box-shadow: $default-shadow;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        img {
+            max-width: 156px;
+            height: auto;
+        }
+        &-burger {
+            display: none;
+            .js-hamburger {
+                transition: All 0.3s ease-in-out;
+                position: relative;
+                cursor: pointer;
+                width: 24px;
+                height: 20px;
+                span {
+                    transition: All 0.3s ease-in-out;
+                    position: absolute;
+                    margin: auto;
+                    width: 100%;
+                    top: 0;
+                    height: 3px;
+                    transform: translateY(-50%);
+                    background-color: $dark-blue;
+                    &:nth-child(2) {
+                        top: 50%;
+                    }
+                    &:nth-child(3) {
+                        top: 100%;
+                    }
+                }
+                &.js-open {
+                    transform: rotate(135deg);
+                    span {
+                        top: 50%;
+                        &:nth-child(2) {
+                            transition-delay: 0.2s;
+                            transform: translateY(-50%) rotate(90deg);
+                        }
+                    }
+                }
+                @media (max-width: $screen-sm-min) {
+                    display: block;
+                    margin-right: 24px;
+                }
+            }
+            @media (max-width: $screen-sm-min) {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        @media (max-width: $screen-sm-min) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__navigation {
+        &-inside {
+            display: block;
+            ul {
+                display: flex;
+                gap: 24px;
+                li {
+                    a {
+                        font-size: 18px;
+                        padding: 12px 0;
+                        display: block;
+                    }
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 0;
+                        height: 2px;
+                        background: $dark-blue;
+                        transition: width 0.3s;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                    @media (max-width: $screen-sm-min) {
+                        padding: 0 24px;
+                    }
+                }
+                @media (max-width: $screen-sm-min) {
+                    flex-direction: column;
+                    min-width: 100%;
+                }
+                @media (max-width: $screen-sm-min) {
+                    gap: 12px;
+                    padding: 12px 0;
+                }
+            }
+            @media (max-width: $screen-sm-min) {
+                display: none;
+            }
+        }
+    }
+    @media (max-width: $screen-sm-min) {
+        flex-direction: column;
+        padding: 24px 12px 12px 12px;
+        gap: 12px;
+        &.fixed {
+            padding: 24px 12px 12px 12px;
+            .js-hamburger {
+                @media (max-width: $screen-sm-min) {
+                }
+            }
+        }
+    }
+}

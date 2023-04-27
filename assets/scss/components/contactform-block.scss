@@ -1,0 +1,18 @@
+.contact-form {
+    max-width: 1000px;
+    margin-top: 96px;
+    @media (max-width: $screen-sm-min) {
+        margin-top: 48px;
+    }
+    h2 {
+        margin-bottom: 48px;
+        @media (max-width: $screen-sm-min) {
+            margin-bottom: 24px;
+        }
+    }
+    input,
+    label,
+    textarea {
+        width: 100%;
+    }
+}

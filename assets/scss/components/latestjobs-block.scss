@@ -1,0 +1,102 @@
+.latest-jobs {
+    margin-top: 96px;
+    h1 {
+        strong {
+            color: $pink;
+        }
+    }
+    &__inside {
+        margin-top: 24px;
+        position: relative;
+
+        /* the slides */
+        .slick-slide {
+            margin: 0 12px;
+            @media (max-width: $screen-sm-min) {
+                margin: 0 24px;
+            }
+        }
+
+           /* the parent */
+           .slick-list {
+            box-sizing: initial;
+            padding: 20px 0px;
+            margin: 0 -12px;
+            @media (max-width: $screen-sm-min) {
+                margin: 0 -24px;
+            }
+        }
+
+        .js-slick-prev {
+            left: -48px;
+            @media (max-width: $screen-sm-min) {
+                left: -28px;
+            }
+        }
+
+        .js-slick-next {
+            right: -48px;
+            @media (max-width: $screen-sm-min) {
+                right: -28px;
+            }
+        }
+        &-post {
+            background: $primary-white;
+            border-radius: 4px;
+            box-shadow: $box-shadow-light;
+            overflow: hidden;
+        }
+        &-thumbnail {
+            width: 100%;
+            padding-top: 75%;
+            position: relative;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                -webkit-transform: translate(50%, -50%);
+                -ms-transform: translate(50%, -50%);
+                transform: translate(50%, -50%);
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                -o-object-position: center;
+                object-position: center;
+            }
+        }
+        &-text {
+            padding: 12px;
+            h4 {
+                color: $light-blue;
+            }
+            .button {
+                box-sizing: border-box;
+                float: right;
+                margin-top: 24px;
+                margin-bottom: 12px;
+                @media (max-width: $screen-sm-min) {
+                    width: 100%;
+                    float: unset;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+        &-desc {
+            margin-top: 12px;
+        }
+        @media (max-width: $screen-md-min) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $screen-sm-min) {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media (max-width: $screen-sm-min) {
+        margin-top: 48px;
+    }
+}
